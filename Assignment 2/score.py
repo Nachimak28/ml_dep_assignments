@@ -30,7 +30,7 @@ def predict(data):
         data = pf.encode_categorical(data, var)
     # check all dummies were added
     data = pf.check_dummy_variables(data, config.DUMMY_VARIABLES)
-    print(data.columns)
+
     # scale variables
     data = pf.scale_features(data, config.OUTPUT_SCALER_PATH)
 
